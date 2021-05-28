@@ -10,6 +10,7 @@ def go_to_login_page(browser):
 
 def test_guest_can_go_to_login_page(browser):
     browser.get(link)
-    time.sleep(5)
     go_to_login_page(browser)
+    time.sleep(5)
+
 
