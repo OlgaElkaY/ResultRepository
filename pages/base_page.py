@@ -16,3 +16,13 @@ class BasePage():
         except NoSuchElementException:
             return False
         return True
+
+    def find_element(self, how, what):
+        try:
+            if how == 'css selector':
+                element = self.browser.find_element_by_css_selector(what)
+            else:
+                element = self.browser.find_element(how, what)
+        except NoSuchElementException:
+            return None
+        return element
